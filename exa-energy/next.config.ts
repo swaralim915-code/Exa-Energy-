@@ -1,8 +1,11 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',
-  // If you are hosting at username.github.io/repo-name/, uncomment this:
-  // basePath: "/repo-name", 
-}
+import type { NextConfig } from "next";
 
-module.exports = nextConfig
+const nextConfig: NextConfig = {
+  output: 'export',
+  images: {
+    unoptimized: true, // Required for static exports on GitHub Pages
+  },
+  basePath: '/Exa-Energy-',
+};
+
+export default nextConfig;
